@@ -20,12 +20,12 @@ if( isset( $_POST['sentMessage'] ) ){
     }
 
     if( empty( $errors ) ){
-        $format = of_get_option('contact_format', "{{NAME}} has sent you a message using your contact form on {{BLOGNAME}}.\r\n\r\n They said:\r\n{{MESSAGE}}\r\n\r\n You can contact them back at: \r\n Email: {{EMAIL}}\r\n Phone: {{PHONE}}");
-        $format = str_replace( '{{NAME}}'    , $_POST['contact_name']   , $format );
-        $format = str_replace( '{{EMAIL}}'   , $_POST['contact_email']  , $format );
-        $format = str_replace( '{{PHONE}}'   , $_POST['contact_phone']  , $format );
-        $format = str_replace( '{{MESSAGE}}' , $_POST['contact_message'], $format );
-        $format = str_replace( '{{BLOGNAME}}', get_bloginfo('name')     , $format );
+        $message = of_get_option('contact_format', "{{NAME}} has sent you a message using your contact form on {{BLOGNAME}}.\r\n\r\n They said:\r\n{{MESSAGE}}\r\n\r\n You can contact them back at: \r\n Email: {{EMAIL}}\r\n Phone: {{PHONE}}");
+        $message = str_replace( '{{NAME}}'    , $_POST['contact_name']   , $message );
+        $message = str_replace( '{{EMAIL}}'   , $_POST['contact_email']  , $message );
+        $message = str_replace( '{{PHONE}}'   , $_POST['contact_phone']  , $message );
+        $message = str_replace( '{{MESSAGE}}' , $_POST['contact_message'], $message );
+        $message = str_replace( '{{BLOGNAME}}', get_bloginfo('name')     , $message );
 
         $subject = of_get_option('contact_subject', '{{NAME}} has sent you a message on {{BLOGNAME}}');
         $subject = str_replace( '{{NAME}}'    , $_POST['contact_name']   , $subject );
@@ -74,7 +74,7 @@ get_header();
                 <p><?php the_content(); ?></p>
                 
                 <?php if( of_get_option('use_local_contact', 'yes') == 'yes' && !empty( of_get_option('contact_email') ) ): ?>
-                <form name="sentMessage" method="post" id="contactForm" novalidate>
+                <form method="post" id="contactForm" novalidate>
                    
                     <?php if( !empty( $success ) ): ?>
                         <div class="alert alert-success"><?php echo $success; ?></div>
@@ -116,7 +116,7 @@ get_header();
                     <div id="success"></div>
                     <div class="row">
                         <div class="form-group col-xs-12">
-                            <button type="submit" class="btn btn-default">Send</button>
+                            <button type="submit" name="sentMessage" class="btn btn-default">Send</button>
                         </div>
                     </div>
                 </form>
