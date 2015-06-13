@@ -1,0 +1,85 @@
+/*
+Theme Name: Coder Dad Clean Blog Alternative
+Theme URI: https://coderdad.net/themes/clean-blog
+Author: David Lawrence@alternative [Start Bootstrap@original]
+Author URI: https://coderdad.net/author/david-lawrence
+Description: Wordpress Alternative to the Clean Blog bootstrap3 theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, fixed-layout, bootstrap, bootstrap3, bootstrap-3, start-bootstrap
+Text Domain: cd-clean-blog
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+body.logged-in nav:first-child{ top: 32px; }
+body.logged-in nav.is-fixed{ top: -19px; }
+
+/**
+ * Resize logo
+ */
+body.logged-in nav.is-fixed .logo{ margin-top: -12px; }
+.logo{ max-height: 40px; }
+
+.comment-form .submit {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.comment-form .submit:hover,
+.comment-form .submit:focus,
+.comment-form .submit.focus,
+.comment-form .submit:active,
+.comment-form .submit.active,
+.open > .dropdown-toggle.comment-form .submit {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+.comment-form .submit:active,
+.comment-form .submit.active,
+.open > .dropdown-toggle.comment-form .submit {
+  background-image: none;
+}
+.comment-form .submit.disabled,
+.comment-form .submit[disabled],
+fieldset[disabled] .comment-form .submit,
+.comment-form .submit.disabled:hover,
+.comment-form .submit[disabled]:hover,
+fieldset[disabled] .comment-form .submit:hover,
+.comment-form .submit.disabled:focus,
+.comment-form .submit[disabled]:focus,
+fieldset[disabled] .comment-form .submit:focus,
+.comment-form .submit.disabled.focus,
+.comment-form .submit[disabled].focus,
+fieldset[disabled] .comment-form .submit.focus,
+.comment-form .submit.disabled:active,
+.comment-form .submit[disabled]:active,
+fieldset[disabled] .comment-form .submit:active,
+.comment-form .submit.disabled.active,
+.comment-form .submit[disabled].active,
+fieldset[disabled] .comment-form .submit.active {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
