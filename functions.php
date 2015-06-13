@@ -29,6 +29,12 @@ function cdcb_add_theme_support(){
 	add_theme_support( 'post-thumbnails' );
 
 	register_nav_menu( 'cdcb_header_nav', 'The Header Menu' );
+
+
+	// Required by Wordpress
+	if ( ! isset( $content_width ) ) $content_width = 1170;
+	if ( is_singular() ) wp_enqueue_script( "comment-reply" );
+	add_theme_support( 'automatic-feed-links' );
 }
 
 /**
@@ -42,9 +48,9 @@ function cdcb_post_comment_template($comment, $args, $depth){
 	<li <?php comment_class( empty( $args['has_children'] ) ? 'well well-sm' : 'well well-sm parent' ) ?> id="comment-<?php comment_ID() ?>">
 		<div class="media-left">
 	        <?php if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, 100 ); ?>
-			<?php printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>' ), get_comment_author_link() ); ?>
 	    </div>
 	    <div class="media-body">
+			<?php printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>' ), get_comment_author_link() ); ?>
 			<?php if ( $comment->comment_approved == '0' ) : ?>
 				<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></em>
 				<br />

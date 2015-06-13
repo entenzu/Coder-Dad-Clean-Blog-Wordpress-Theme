@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('<?php echo of_get_option( 'home_image_uploader', 'http://lorempixel.com/g/1920/800/' ); ?>')">
+    <header class="intro-header" style="background-image: url('<?php echo of_get_option( 'tags_image_uploader', of_get_option('category_image_uploader', 'http://lorempixel.com/g/1920/800/' ) ); ?>')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -12,7 +12,7 @@
             </div>
         </div>
     </header>
-    
+
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">

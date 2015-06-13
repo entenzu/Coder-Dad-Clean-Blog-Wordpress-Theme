@@ -5,9 +5,9 @@ Author: David Lawrence@alternative [Start Bootstrap@original]
 Author URI: https://coderdad.net/author/david-lawrence
 Description: Wordpress Alternative to the Clean Blog bootstrap3 theme.
 Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: light, fixed-layout, bootstrap, bootstrap3, bootstrap-3, start-bootstrap
+License: Apache 2.0
+License URI: SEE LICENSE FILE
+Tags: light, fixed-layout
 Text Domain: cd-clean-blog
 
 This theme, like WordPress, is licensed under the GPL.
@@ -15,7 +15,35 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 body.logged-in nav:first-child{ top: 32px; }
-body.logged-in nav.is-fixed{ top: -19px; }
+body.logged-in nav.is-fixed{ top: -30px; }
+
+/**
+ * Required
+ */
+.wp-caption{
+	/** This theme doesnt support these. Bootstrap takes over most of these. */
+}
+.wp-caption-text{
+	/** This theme doesnt support these. Bootstrap takes over most of these. */
+}
+.sticky{
+	/** This theme doesnt support these. Bootstrap takes over most of these. */
+}
+.gallery-caption{
+	/** This theme doesnt support these. Bootstrap takes over most of these. */
+}
+.bypostauthor{
+	/** This theme doesnt support these. Bootstrap takes over most of these. */
+}
+.alignright{
+	/** This theme doesnt support these. Bootstrap takes over most of these. */
+}
+.alignleft{
+	/** This theme doesnt support these. Bootstrap takes over most of these. */
+}
+.aligncenter{
+	/** This theme doesnt support these. Bootstrap takes over most of these. */
+}
 
 /**
  * Resize logo

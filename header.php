@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 
 <head>
 
@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog</title>
+    <title><?php wp_title(); ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
 
 </head>
 
-<body class="<?php echo is_user_logged_in() ? 'logged-in' : ''; ?>">
+<body <?php body_class( is_user_logged_in() ? 'logged-in' : '' ); ?>>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -76,7 +76,7 @@
                     'menu_class' => 'nav navbar-nav navbar-right',
                     'menu_id' => '',
                     'echo' => true,
-                    'fallback_cb' => false,
+                    'fallback_cb' => 'wp_link_pages',
                     'before' => '',
                     'after' => '',
                     'link_before' => '',
@@ -94,7 +94,7 @@
         <!-- /.container -->
     </nav>
     
-    <?php if( is_home() ): ?>
+    <?php if( is_home() || is_404() ): ?>
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
     <header class="intro-header" style="background-image: url('<?php echo of_get_option( 'home_image_uploader', 'http://lorempixel.com/g/1920/800/' ); ?>');">
