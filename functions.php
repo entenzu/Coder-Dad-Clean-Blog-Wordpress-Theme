@@ -27,6 +27,8 @@ include('inc/clean-up.php');
 add_action('after_setup_theme', 'cdcb_add_theme_support');
 function cdcb_add_theme_support(){
 	add_theme_support( 'post-thumbnails' );
+
+	register_nav_menu( 'cdcb_header_nav', 'The Header Menu' );
 }
 
 /**
