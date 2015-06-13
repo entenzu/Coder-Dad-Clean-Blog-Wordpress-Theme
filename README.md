@@ -45,7 +45,9 @@ Features:
   </li>
 </ol>
 
-{{ External Links Pending }}
+Coder Dads Theme:
+http://coderdad.net/themes/clean-blog-wordpress-theme-alternative/
+
 
 Credits:
 <ul>
